@@ -1,0 +1,22 @@
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+public class MyClass {
+    public static void main(String[] args) {
+       System.out.println(validateUsr("regex"));
+        System.out.println(validateUsr("a"));
+       System.out.println(validateUsr("Hass"));
+      System.out.println(validateUsr("Hasd_12assssssasasasasasaasasasasas"));
+        System.out.println(validateUsr(""));
+       System.out.println(validateUsr("____"));
+        System.out.println(validateUsr("012"));
+       System.out.println(validateUsr("p1pp1"));
+        System.out.println(validateUsr("asd43 34"));
+        System.out.println(validateUsr("asd43_34"));
+    }
+    public static boolean validateUsr(String userNameString){  
+        Pattern p = Pattern.compile("^[a-z0-9_]{4,15}$");  
+        Matcher m = p.matcher(userNameString);  
+        return m.matches();  
+    } 
+}
