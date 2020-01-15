@@ -1,0 +1,6 @@
+public enum LastName {
+  Jordan,
+  Freeman,
+  Cobra,
+  Tored
+}
