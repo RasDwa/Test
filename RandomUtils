@@ -1,0 +1,6 @@
+public class RandomUtils{
+    
+    public static int randomNumberFromRange(int max){
+      return new Random().nextInt(max);
+    }
+}
