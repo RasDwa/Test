@@ -1,0 +1,5 @@
+public class CreditCardGenerator {
+    public CreditCard generate() {
+      return generate(CreditCardType.values().[RandomUtils.randomNumberFromRange()]
+    }
+}
