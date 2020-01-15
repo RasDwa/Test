@@ -1,0 +1,14 @@
+public class Demo {
+  public static void main(String[] args) {
+    FakeData fakeData = new FakeData();
+    
+    System.out.println(fakeData.colors().generate());
+    System.out.println(fakeData.currency().generate());
+    
+    System.out.println(fakeData.creditCards().generate());
+    System.out.println(fakeData.creditCards().generate(CreditCardType.MASTERCARD));
+    
+    System.out.println(fakeData.emails().generate());
+    System.out.println(fakeData.emails().generate(EmailType.FIRST_LAST_NAMES));
+  }
+}
