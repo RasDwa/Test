@@ -17,6 +17,7 @@ public class CreditCardGenerator {
               default :
                 return null;
             }
+            return new CreditCard(cardNumber,"10"
             
         private String getRandomCardNumber() {
                 String num = "";
