@@ -1,0 +1,9 @@
+public class CreditCard {
+  private String cardNumber;
+  private String data;
+  private String owner;
+  private CreditCardType type;
+   private String securityCode;
+   
+   СОЗДАТЬ КОНСТРУКТОР, ГЕТЕРЫ, ТУ СТРИНГ!!!!!!
+}
