@@ -1,5 +1,47 @@
 public class CreditCardGenerator {
     public CreditCard generate() {
       return generate(CreditCardType.values().[RandomUtils.randomNumberFromRange()]
+      }
+    public CreditCard generate(CreditCardType type) {
+        String cardNumber = "";
+        switch(type) {
+            case: MASTERCARD:
+                cardNumber += 5 + getRandomCardNumber();
+                break;
+                case: VISA:
+                cardNumber += 4 + getRandomCardNumber();
+                break;
+                case: MAESTRO:
+                cardNumber += 6 + getRandomCardNumber();
+                break;
+              default :
+                return null;
+            }
+            
+        private String getRandomCardNumber() {
+                String num = "";
+                for (int i =0; i < 15; i++){
+                num += RandomUtils.randomNumberFromRange(9);
+                }
+                return num;
+            }
+         private String getRandomSecurityCode() {
+                String num = "";
+                for (int i =0; i < 3; i++){
+                num += RandomUtils.randomNumberFromRange(9);
+                }
+                return num;
+            }
+            
+          private String getNexYear() {
+          return "" + Calendar.getInstance().get(Calendar.YEAR);
+          }
+        private Person getRandomPerson() {
+            FirstName fname = FirstName.values()[RandomUtils.randomNumberFromRange(FirstName)];
+            LastName lname = LastName.values()[RandomUtils.randomNumberFromRange(LastName)];
+            
+            return new Person(fname.toString(), lname.toString());
+        }
+        
     }
 }
