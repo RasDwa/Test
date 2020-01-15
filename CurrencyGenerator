@@ -1,0 +1,5 @@
+public class CurrencyGenerator{
+    public Currency generate() {
+      return Currency.values()[RandomUtils.randomNumberFromRange(Currency.values().length - 1)];
+    }
+}
