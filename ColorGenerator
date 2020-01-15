@@ -1,0 +1,11 @@
+public class ColorGenerator {
+
+    public Color generate() {
+    return new Color(
+    RandomUtils.randomNumberFromRange(255)
+    RandomUtils.randomNumberFromRange(255)
+    RandomUtils.randomNumberFromRange(255)
+    );
+   }
+ }
+ 
