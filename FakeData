@@ -1,0 +1,14 @@
+public class FakeData{
+    public ColorGenerator color(){
+        return new ColorGenerator();
+      }
+    public CurrencyGenerator currency(){
+        return new CurrencyGenerator();
+      }
+    public CreditCardGenerator creditCards(){
+        return new CreditCardGenerator();
+      }
+     public EmailGenerator emails(){
+        return new EmailGenerator();
+      }
+}
