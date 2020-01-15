@@ -1,0 +1,7 @@
+pulbic class Person {
+  private String firstName;
+  private String lastName;
+  private String yearOfBirth;
+  
+        КОНСТРУКТОР, ГЕТЕРЫ, ТУ СТРИНГ
+}
