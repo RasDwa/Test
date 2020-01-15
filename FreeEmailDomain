@@ -1,0 +1,7 @@
+public enum FreeEmailDomain {
+  GOOGLE("google.com");
+  
+  private String emailDomain;
+    
+    КОНСТРУКТОР, ГЕТЕР
+}
