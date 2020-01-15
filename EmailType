@@ -1,0 +1,6 @@
+public enum EmailType {
+  FIRST_LAST_NAMES,
+  F_N_LETTERS,
+  LAST_YEAR,
+  LAST_NUMBER
+}
