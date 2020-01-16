@@ -1,0 +1,14 @@
+public class EmailGenerator {
+  public Email generator() {
+    return generate(EmailType.values()[RandomUtils.randomNumberFromRange()]
+  }
+  public Email generate()(EmailType type) {
+      switch(type) {
+        case: FIRST_LAST_NAMES;
+          return null;
+        case: F_N_LETTERS;
+          return null;
+        case: LAST_YEAR;
+          return null;
+    }
+}
