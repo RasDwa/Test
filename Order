@@ -1,0 +1,50 @@
+public class Order {
+  protected String date;
+  protected String time;
+  protected   int id;
+  
+  СДЕЛАТЬ protected КОНСТРУКТОР, ГЕТЕРЫ!!!
+  
+}
+
+public class OrdinaryOrder extend Order {
+  СДЕЛАТЬ KOНСТРУКТОР, toString!!!
+  
+}
+
+public class ExpressOrder extend Order {
+  protected String courter;
+  protected String dayToDeliver;
+ СДЕЛАТЬ KOНСТРУКТОР, Geters, toString!!!
+ 
+  
+}
+public class InsuredOrder extend Order {
+  protected String company;
+  protected double amount;
+ СДЕЛАТЬ KOНСТРУКТОР, Geters, toString!!!
+}
+public class Ordersmanager {
+  private ArrayList list = new ArrayList;
+  
+  public void add(Order order) {
+    list.add(order);
+  }
+  public void show() {
+    System.out.println(Arrays.toString(list));
+  }
+}
+public class DeliveryDemo {
+  public static void main(String[] args) {
+    Ordersmanager odersmanager = new Ordersmanager();
+    Order ordinary = new OrdinaryOrder("16.01.2020", 1);
+    odersmanager.add(ordinary);
+    Order expressOrder = new ExpressOrder("16.01.2020", 1, "Kometa", 1);
+    odersmanager.add(expressOrder);
+    Order insuredOrder = new InsuredOrder("16.01.2020", 1, "TVM", 50.5);
+    odersmanager.add(insuredOrder);
+    odersmanager.show();
+  }
+}
+
+
