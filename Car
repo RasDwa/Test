@@ -1,0 +1,64 @@
+public abstract Car {
+  protected String brand;
+  protected String year;
+  protected Double price;
+  protected List<Addition> additions;
+  protected String country;
+   СДЕЛАТЬ КОНСТРУКТОР, ГЕТЕРЫ, ТУ СТРИНГ !!!!
+  
+}
+public class Addition {
+  private String name;
+  private String description;
+  
+  СДЕЛАТЬ КОНСТРУКТОР, ГЕТЕРЫ, ТУ СТРИНГ !!!!
+}
+
+public class UsedCar extend Car {
+  private String milegeage;
+  private Customer customer;
+  
+  
+   СДЕЛАТЬ КОНСТРУКТОР, ГЕТЕРЫ, ТУ СТРИНГ !!!!
+  
+}
+public class Custumer {
+  private String firstName;
+  private String lastName;
+  
+  
+   СДЕЛАТЬ КОНСТРУКТОР, ГЕТЕРЫ, ТУ СТРИНГ !!!!
+  
+}
+public class SportCar extend Car {
+  private String maxSpeed;
+  private String engineVolume;
+  private String power;
+    
+   СДЕЛАТЬ КОНСТРУКТОР, ГЕТЕРЫ, ТУ СТРИНГ !!!!
+  
+}
+public class SpecialCar extend Car {
+  private String type;
+  private String mass;
+    
+   СДЕЛАТЬ КОНСТРУКТОР, ГЕТЕРЫ, ТУ СТРИНГ !!!!
+  
+}
+public class CarDealer {
+ private List<Car> soldCars = new ArrayList<>();
+ 
+ public void addSoldCar(Car car) {
+    soldCars.add(car);
+ }
+  public List<Car> getSoldCar() {
+    return soldCars;
+ }
+  
+}
+
+public class CarDemo {
+  public static void main(String args) {
+    CarDealer carDealer = new CarDealer();
+  }
+}
