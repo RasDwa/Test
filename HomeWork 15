@@ -1,0 +1,29 @@
+
+//Давайте померяемся строками! А заодно и задачку решим по программированию: создадим список строк, считаем с клавиатуры 5 штук
+//и добавим их в список. Затем с помощью цикла найдем из списка самую длинную строку (или несколько, если она такая не одна).
+//Страна должна знать своих героев: самые длинные строки будут выведены на экран.
+
+import java.util.ArrayList;
+public class MyClass {
+    public static void main(String args[]) {
+      ArrayList<String> list = new ArrayList<>();
+     list.add("Java");
+      list.add("Online");
+      list.add("site");
+      list.add("Compiler");
+      list.add("Interactive");
+      
+    int max = list.get(0).length();
+    int len = 0;
+    String str ="";
+      for(int i = 0; i<list.size(); i++){
+          len = list.get(i).length();
+    if (len > max) {
+        str = list.get(i);
+    }
+    max = len;
+}
+System.out.println(str);
+     
+    }
+}
