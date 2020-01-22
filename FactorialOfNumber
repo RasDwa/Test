@@ -1,0 +1,30 @@
+import java.lang.Math;
+import java.util.ArrayList;
+import java.util.Collections;
+public class MyClass {
+    public static void main(String args[]) {
+     System.out.println(isStrongNumber(1));
+    }
+      public static String isStrongNumber(int num) {
+      int results = 0;
+       ArrayList<Integer> list = new ArrayList<>();
+       while (num > 0) {
+      int l = num % 10;
+      list.add(l);
+      num /= 10;
+     }
+     for(int i = 0; i < list.size(); i++){
+     results += calculateFactorial(list.get(i));
+   }
+		
+		return (results - num )==0 ? "STRONG!!!!" : "Not Strong !!";
+    }
+    
+    static int calculateFactorial(int n){
+		int result = 1;
+		for (int i = 1; i <=n; i ++){
+			result = result*i;
+		}
+		return result;
+	}	
+}
