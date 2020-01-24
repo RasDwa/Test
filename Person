@@ -36,14 +36,11 @@ public class Kata {
     }
 ------------------------------------------------------------
 import java.util.*;
-public class MyClass {
-    public static void main(String args[]) {
-      System.out.println(splitAndAdd(new int[]{4, 2, 5, 3, 2, 5, 7},2));
-     
+public class Kata {
 
-    }
     public static int[] splitAndAdd(int[] numbers, int n) {
         // your code
+        if(n !=0) {
           ArrayList<Integer> list3 = new ArrayList<>();
           int[] mas = new int[numbers.length];
           mas = numbers;
@@ -56,15 +53,15 @@ public class MyClass {
        // list2.removeAll(list2);
          int a = numbers.length/2;
          int b =numbers.length - numbers.length/2;
-         System.out.println(a+" "+b);
+        // System.out.println(a+" "+b);
       for(int i =0; i < a; i++){
           list.add(numbers[i]); //4 2 5
         }
-        System.out.println(list);
+       // System.out.println(list);
         for(int i =a; i < numbers.length; i++){
           list2.add(numbers[i]); // 3 2 5 7
         }
-        System.out.println(list2);
+        //System.out.println(list2);
         if(list2.size() != list.size() ){
             list.add(0,0);
         }
@@ -75,14 +72,16 @@ public class MyClass {
         
         numbers = getInt(list3);
          //list3.removeAll(list3);
-        System.out.println(Arrays.toString(numbers));
-        System.out.println("na4at vtoroy kryg");
+       // System.out.println(Arrays.toString(numbers));
+       // System.out.println("na4at vtoroy kryg");
         n--;
     }
         // System.out.println(Arrays.toString(getInt(list3)));
         return getInt(list3);
+        } 
+        else return numbers;
     }
-     public static int[] getInt(ArrayList<Integer> list) {
+    public static int[] getInt(ArrayList<Integer> list) {
          int[] a = new int[list.size()];
            for(int i =0; i <list.size(); i++){
           a[i] = list.get(i);
@@ -90,6 +89,59 @@ public class MyClass {
        
         return a;
      }
-}
+     
+     /////////////////
+     import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+import org.junit.runners.JUnit4;
+import java.util.*;
 
-    //  System.out.println("Sum of x+y = " + z);
+public class TestClass {
+     
+    @Test
+    public void splitAndAdd() throws Exception {
+        
+        int[] expected = new int[]{5,10};
+        int[] input = Kata.splitAndAdd(new int[]{1,2,3,4,5},2);
+
+        assertEquals(Arrays.toString(expected), Arrays.toString(input));
+
+        expected = new int[]{15};
+        input = Kata.splitAndAdd(new int[]{1,2,3,4,5},3);
+
+        assertEquals(Arrays.toString(expected),Arrays.toString(input));
+        
+        expected = new int[]{15};
+        input = Kata.splitAndAdd(new int[]{15},3);
+
+        assertEquals(Arrays.toString(expected),Arrays.toString(input));
+        
+        expected = new int[]{183, 125};
+        input = Kata.splitAndAdd(new int[]{32,45,43,23,54,23,54,34},2);
+
+        assertEquals(Arrays.toString(expected),Arrays.toString(input));
+        
+        expected = new int[]{32,45,43,23,54,23,54,34};
+        input = Kata.splitAndAdd(new int[]{32,45,43,23,54,23,54,34},0);
+
+        assertEquals(Arrays.toString(expected),Arrays.toString(input));
+
+        expected = new int[]{305, 1195};
+        input = Kata.splitAndAdd(new int[]{3,234,25,345,45,34,234,235,345},3);
+
+        assertEquals(Arrays.toString(expected),Arrays.toString(input));
+
+        expected = new int[]{1040, 7712};
+        input = Kata.splitAndAdd(new int[]{3,234,25,345,45,34,234,235,345,34,534,45,645,645,645,4656,45,3},4);
+
+        assertEquals(Arrays.toString(expected),Arrays.toString(input));
+        
+        expected = new int[]{79327};
+        input = Kata.splitAndAdd(new int[]{23,345,345,345,34536,567,568,6,34536,54,7546,456},20);
+        
+        assertEquals(Arrays.toString(expected),Arrays.toString(input));
+        
+    }
+    
+}
+    
